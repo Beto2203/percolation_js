@@ -53,7 +53,7 @@ function start(nSize) {
                     row = Math.floor(+square.id / nSize) + 1;
                     col = +square.id % nSize + 1;
                     perc.open(row, col);
-                    document.querySelector("#numOpen").innerText = perc.numberOfOpen + " squares open";
+                    document.querySelector("#numOpen").innerText = perc.numberOfOpen + " squares opened";
                     randomNums.setAttribute("max", ((nSize**2) - perc.numberOfOpen) + "");
                     if (perc.numberOfOpen === nSize**2) {
                         noBlockedLeft = true;
@@ -95,6 +95,8 @@ slider.addEventListener("input", () => {
 
 submitSlider.addEventListener("click", () => {
     grid.parentElement.removeChild(grid);
+    document.querySelector("#percolates").innerText = "Does not percolates";
+    document.querySelector("#numOpen").innerText = "0 squares opened"
    start(slider.value);
 });
 
