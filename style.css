@@ -1,0 +1,123 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Style */
+#gridParent {
+    border: 1px solid black;
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+}
+body {
+    background: white;
+    font-family: "Helvetica", sans-serif;
+    user-select: none;
+}
+:root{
+    font-size: 24px;
+}
+#grid {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.square {
+    border: 1px solid lightgray;
+}
+
+.blocked {
+    background: black !important;
+    border: none !important;
+}
+
+.open {
+    background: white;
+}
+
+.full {
+    background: lightblue;
+}
+
+.sliderContainer {
+    margin: auto;
+    padding-top: 50px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+}
+
+.sliderContainer {
+    justify-content: center;
+    align-items: center;
+}
+#infoContainer {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+
+button {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+#mainPanel {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#randomPanel {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#randomPanel * {
+    font-size: 0.8rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.until {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: center;
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Percolation</title>
+</head>
+<body>
+    <main>
+        <div id="mainPanel">
+            <div id="gridParent"></div>
+
+            <div id="infoContainer">
+                <div id="percolates">Does not percolates</div>
+                <div id="numOpen">0 squares open</div>
+            </div>
+            <div class="sliderContainer">
+                <label for="slider">Change grid size: <span id="sliderNum">10</span></label>
+                <input type="range" name="slider" id="slider" min="2" max="50" step="1" value="10">
+                <button type="button" id="submitSlider">Submit</button>
+            </div>
+        </div>
+
+
+        <div id="randomPanel">
+            <button type="button" id="randomCoordinate">Open random square(s)</button>
+            <label for="randomNums">Enter the number of random squares you want to open</label>
+            <input type="range" name="randomNums" id="randomNums" min="1" step="1">
+            <span id="displayRandomNums">1</span>
+            <div class="until">
+                <label for="untilPercolates">Until percolates</label>
+                <button type="button" name="untilPercolates" id="untilPercolates">Start</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="WeightedQuickUnionFind.js"></script>
+    <script src="Percolation.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
